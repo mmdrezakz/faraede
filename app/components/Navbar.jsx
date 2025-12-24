@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 
 
 export default function Navbar() {
@@ -55,17 +56,25 @@ export default function Navbar() {
     >
 
       <div className="flex justify-between items-center mx-auto max-w-7xl">
+        <div className='flex justify-center items-center gap-4'>
+
         {/* Logo */}
         <h1
           ref={(el) => (itemsRef.current[0] = el)}
           className="bg-gray-200 px-2 py-0.5 rounded-2xl font-extrabold text-gray-950 text-3xl tracking-wide"
-        >
+          >
           فرا ایده
         </h1>
+        <div className='flex justify-between items-end gap-2 rounded-full ring-3 ring-gray-400 w-8'>
+          
+            <Image className='shadow-2xs shadow-gray-200 rounded-full' src={"https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"} width={100} height={100} alt='placeholder'></Image>
+            <p className='text-gray-200'>UserName</p>
+        </div>
+          </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 font-medium text-white text-lg">
-          {["خانه", "خدمات", "نمونه‌کارها", "تماس"].map((item, i) => (
+          {["خانه", "خدمات", "نمونه‌کارها", "اعضاء"].map((item, i) => (
             <li
               key={i}
               ref={(el) => (itemsRef.current[i + 1] = el)}
