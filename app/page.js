@@ -91,7 +91,7 @@ export default function GsapDemoPage() {
 
         {/* لامپ داخل یک wrapper برای ref */}
         <div ref={lampWrapperRef} className="absolute top-18 z-10 opacity-0">
-          <Image src="/2.png" width={200} height={200} alt="lamp" />
+          <Image src='/2.png' width={200} height={200} alt="lamp" />
         </div>
 
         {/* متن‌ها */}
@@ -99,7 +99,7 @@ export default function GsapDemoPage() {
           <h1
             key={i}
             ref={(el) => (textRef.current[i] = el)}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
           >
             {txt}
           </h1>
@@ -109,6 +109,7 @@ export default function GsapDemoPage() {
       </div>
 
       <ScrollGuide />
+
     </>
   );
 }
