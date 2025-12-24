@@ -47,7 +47,7 @@ export default function GsapDemoPage() {
         y: 0,
         duration: 1.2,
         ease: 'power3.out',
-        delay: 2.2,
+        delay: 0.9,
       }
     );
 
@@ -68,7 +68,7 @@ export default function GsapDemoPage() {
       { opacity: 0 },
       {
         opacity: 0.55,
-        duration: 4,
+        duration: 2.4,
         ease: 'power1.inOut',
         yoyo: true,
         repeat: -1,
