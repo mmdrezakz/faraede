@@ -65,7 +65,7 @@ export default function Navbar() {
           >
           فرا ایده
         </h1>
-        <div className='flex justify-between items-end gap-2 rounded-full ring-3 ring-gray-400 w-8'>
+        <div className='flex justify-between items-end gap-3 rounded-full ring-3 ring-gray-400 w-8 h-8'>
           
             <Image className='shadow-2xs shadow-gray-200 rounded-full' src={"https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"} width={100} height={100} alt='placeholder'></Image>
             <p className='text-gray-200'>UserName</p>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 font-medium text-white text-lg">
-          {["خانه", "خدمات", "نمونه‌کارها", "اعضاء"].map((item, i) => (
+          {["خانه", "خدمات", "نمونه‌کارها", "اعضاء","ثبت نام / ورود"].map((item, i) => (
             <li
               key={i}
               ref={(el) => (itemsRef.current[i + 1] = el)}
@@ -104,6 +104,9 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-4 bg-gray-900/95 bg-opacity-95 shadow-xl mt-4 p-5 rounded-xl text-white text-lg"
         >
           <button className="text-right">خانه</button>
+          <button className="text-right">ثبت نام / ورود</button>
+          <button className="text-right">اعضاء</button>
+
           <button className="text-right">خدمات</button>
           <button className="text-right">نمونه‌کارها</button>
           <button className="text-right">تماس</button>
