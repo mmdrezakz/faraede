@@ -28,7 +28,7 @@ export default function ScrollGuide() {
     <div className="bottom-6 left-1/2 z-50 fixed -translate-x-1/2">
       <button
         onClick={handleScroll}
-        className="flex flex-col items-center text-gray-700 hover:text-gray-900"
+        className="flex flex-col items-center text-gray-200 hover:text-gray-50"
       >
         <span className="mb-2 text-sm">اسکرول کنید</span>
 
