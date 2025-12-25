@@ -89,11 +89,11 @@ export default function GsapDemoPage() {
         {/* هاله نور */}
         <div
           ref={lampGlowRef}
-          className="absolute top-20 w-[260px] h-[260px] rounded-full bg-yellow-200 opacity-0 blur-3xl"
+          className="absolute top-18 md:top-20  w-65 h-65 rounded-full bg-yellow-200 opacity-0 blur-3xl"
         ></div>
 
         {/* لامپ داخل یک wrapper برای ref */}
-        <div ref={lampWrapperRef} className="absolute top-18 z-10 opacity-0">
+        <div ref={lampWrapperRef} className="absolute top-16 md:top-18 z-10 opacity-0">
           <Image src='/2.png' width={200} height={200} alt="lamp" />
         </div>
 
@@ -102,7 +102,7 @@ export default function GsapDemoPage() {
           <h1
             key={i}
             ref={(el) => (textRef.current[i] = el)}
-            className="z-40 text-[23px] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
+            className="z-40 text-[26px] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
           >
             {txt}
           </h1>

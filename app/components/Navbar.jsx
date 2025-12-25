@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
+import { AnimateIcon } from '@/components/animate-ui/icons/icon';
 
 
 export default function Navbar() {
@@ -92,7 +94,16 @@ export default function Navbar() {
           className="md:hidden text-white text-3xl cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          ☰
+          {open ? <>
+          
+          
+<AnimateIcon >
+  <X />
+</AnimateIcon>
+          </>: <>
+          <Menu  />
+          </>}
+          
         </div>
       </div>
             
