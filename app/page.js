@@ -1,130 +1,40 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import Navbar from './components/Navbar';
-import IsTyping from './components/IsTyping';
-import ScrollGuide from './components/ScrollGuide';
 import Image from 'next/image';
-import { BubbleBackground } from './components/BubleBg';
-import Section2 from './Section2';
-import Section3 from './Section3';
+import Navbar from './components/Navbar';
+import ScrollGuide from './components/ScrollGuide';
 
-
-
-export default function GsapDemoPage() {
-  const textRef = useRef([]);
-  const lampWrapperRef = useRef(null);
-  const lampGlowRef = useRef(null);
-
-  useEffect(() => {
-    // انیمیشن ورود متن‌ها
-    gsap.fromTo(
-      textRef.current,
-      {
-        opacity: 0,
-        y: 40,
-        filter: 'blur(12px)',
-        scale: 0.95,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        filter: 'blur(0px)',
-        scale: 1,
-        duration: 1.6,
-        stagger: 0.25,
-        ease: 'power4.out',
-      }
-    );
-
-    // ظاهر شدن لامپ بعد از متن‌ها
-    gsap.fromTo(
-      lampWrapperRef.current,
-      {
-        opacity: 0,
-        scale: 0.8,
-        y: -20,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'power3.out',
-        delay: 0.9,
-      }
-    );
-
-    // تاب خوردن لامپ
-    gsap.to(lampWrapperRef.current, {
-      rotation: 6,
-      x: 8,
-      duration: 2.4,
-      ease: 'power1.inOut',
-      yoyo: true,
-      repeat: -1,
-      delay: 2.2,
-    });
-
-    // پالس نور لامپ
-    gsap.fromTo(
-      lampGlowRef.current,
-      { opacity: 0 },
-      {
-        opacity: 0.55,
-        duration: 2.4,
-        ease: 'power1.inOut',
-        yoyo: true,
-        repeat: -1,
-        delay: 2.2,
-      }
-    );
-  }, []);
-
+export default function LandingPage() {
   return (
-    <>
+    <header className='min-h-screen w-full '>
       <Navbar />
 
-      <div className="h-screen relative flex flex-col justify-center items-center gap-6   bg-linear-to-r from-gray-400 via-gray-100 to-gray-400  text-gray-800">
-<BubbleBackground />
-        {/* هاله نور */}
-        <div
-          ref={lampGlowRef}
-          className="absolute  top-0  w-65 h-65 rounded-full bg-yellow-200 opacity-0 blur-3xl"
-        ></div>
+{/* Hero Section */}
+<section className="relative grid  grid-cols-1 md:grid-cols-3   md:mt-50 section1 text-center section2   h-auto md:h-[65vh] px-6 md:py-10">
 
-        {/* لامپ داخل یک wrapper برای ref */}
-        <div ref={lampWrapperRef} className="absolute top-0  z-10  opacity-0">
-          <Image src='/2.png' width={200} height={200} alt="lamp" />
-        </div>
+  {/* Text */}
+  <div className="  my-30">
+    <h1 className=" text-6xl lg:text-8xl font-bold mt-10 text-gray-100 ">فرا تر از انتظار</h1>
+    <h2 className="text-4xl md:text-6xl  text-gray-200 ">فرا ایده</h2>
+    <button className="bg-gray-400 mt-1 text-gray-900 px-6 py-3 rounded-full hover:bg-gray-300 transition duration-500">
+      خدمات
+    </button>
+  </div>
 
-        {/* متن‌ها */}
-        {['فرا ایده', 'تیم طراحی و توسعه وب اپلیکیشن'].map((txt, i) => (
-          <h1
-            key={i}
-            ref={(el) => (textRef.current[i] = el)}
-            className="z-40 text-[26px] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
-          >
-            {txt}
-          </h1>
-        ))}
+  {/* Image */}
+  <div className="  flex justify-center md:col-span-2 ">
+    <Image
+      src="/pngwing.com.png"
+      width={800}
+      height={300}
+      alt="hero"
+      className="object-contain"
+    />
+  </div>
 
-        <IsTyping />
-      </div>
-<div className="
-  w-full h-2 
-  bg-linear-to-b from-gray-200/0 via-gray-300 to-gray-900
-  shadow-[800px_800px_400px_100px_rgba(500,500,400,100)]
-  "></div>      
-<Section2 />
-  
-<div className='h-fit py-5 relative bg-gray-200 shadow-2xl shadow-gray-950 '>
-<h4 className='text-center text-4xl md:text-5xl lg:text-6xl text-gray-800 p-5'>مراحل طراحی سایت شما :</h4>
-<Section3 />
-</div>
+</section>
 
-  <ScrollGuide />
-    </>
+      <ScrollGuide />
+    </header>
   );
 }

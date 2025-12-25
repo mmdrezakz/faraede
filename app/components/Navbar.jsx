@@ -54,7 +54,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="top-0 left-0 z-50 relative bg-linear-to-r from-gray-950 via-gray-900 to-gray-950 bg-opacity-90 shadow-gray-600 shadow-lg backdrop-blur-xl px-8 py-4 w-full"
+      className="top-0 left-0 z-50 relative px-8 py-4 w-full"
     >
 
       <div className="flex justify-between items-center mx-auto max-w-7xl">

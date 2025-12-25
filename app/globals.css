@@ -129,16 +129,14 @@
     @apply bg-background text-foreground;
   }
 }
-.section2{
-  background: url("/main.jpg");
-  background-position-y: 30%;
-background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  backdrop-filter: sepia(90%);
 
-}
 body{
   box-sizing: border-box;
+  position: relative;
+}
+header{
+  background: url("/layered.svg");
+  background-position-x:center ;
+  background-position-y:0% ;
+  background-size: cover;
 }
