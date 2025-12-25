@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Bebas+Neue&family=Geo:ital@0;1&family=Gulzar&family=Lalezar&family=Lemonada:wght@300..700&family=Mirza:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Vazirmatn:wght@100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 .text-shadow-custom {
   text-shadow: 3px 7px 6px rgba(0,0,0,0.3);
+}
+.lalezar {
+  font-family: "Lalezar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @theme inline {
@@ -126,10 +131,10 @@
 }
 .section2{
   background: url("/main.jpg");
-  background-position: center;
-  background-attachment:scroll;
+  background-position-y: 50%;
+background-attachment: scroll;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   
   backdrop-filter: sepia(90%);
 

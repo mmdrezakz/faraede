@@ -8,6 +8,7 @@ import ScrollGuide from './components/ScrollGuide';
 import Image from 'next/image';
 import { BubbleBackground } from './components/BubleBg';
 import Section2 from './Section2';
+import Section3 from './Section3';
 
 
 
@@ -90,7 +91,7 @@ export default function GsapDemoPage() {
         {/* هاله نور */}
         <div
           ref={lampGlowRef}
-          className="absolute  top-18 md:top-20  w-65 h-65 rounded-full bg-yellow-200 opacity-0 blur-3xl"
+          className="absolute  top-0  w-65 h-65 rounded-full bg-yellow-200 opacity-0 blur-3xl"
         ></div>
 
         {/* لامپ داخل یک wrapper برای ref */}
@@ -111,12 +112,19 @@ export default function GsapDemoPage() {
 
         <IsTyping />
       </div>
-      <ScrollGuide />
 <div className="
   w-full h-2 
   bg-linear-to-b from-gray-200/0 via-gray-300 to-gray-900
   shadow-[800px_800px_400px_100px_rgba(500,500,400,100)]
-"></div>      <Section2 />
+  "></div>      
+<Section2 />
+  
+<div className='h-fit py-5 relative bg-gray-200'>
+<h4 className='text-center text-4xl md:text-5xl lg:text-6xl text-gray-800 p-5'>مراحل طراحی سایت شما :</h4>
+<Section3 />
+</div>
+
+  <ScrollGuide />
     </>
   );
 }
