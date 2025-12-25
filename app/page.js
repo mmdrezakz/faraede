@@ -119,7 +119,7 @@ export default function GsapDemoPage() {
   "></div>      
 <Section2 />
   
-<div className='h-fit py-5 relative bg-gray-200'>
+<div className='h-fit py-5 relative bg-gray-200 shadow-2xl shadow-gray-950 '>
 <h4 className='text-center text-4xl md:text-5xl lg:text-6xl text-gray-800 p-5'>مراحل طراحی سایت شما :</h4>
 <Section3 />
 </div>

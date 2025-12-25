@@ -98,7 +98,7 @@ export default function ResponsiveStepper() {
 
         {activeStep === steps.length ? (
           <>
-            <Typography sx={{ mb: 2, textAlign: 'center' }}>
+            <Typography sx={{ mb: 2,fontSize:"20px", textAlign: 'center' }}>
               تبریک! سایت شما آماده است و پشتیبانی با ماست.
             </Typography>
             <Button variant="contained" onClick={handleReset}>
