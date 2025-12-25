@@ -6,6 +6,9 @@ import Navbar from './components/Navbar';
 import IsTyping from './components/IsTyping';
 import ScrollGuide from './components/ScrollGuide';
 import Image from 'next/image';
+import { BubbleBackground } from './components/BubleBg';
+
+
 
 export default function GsapDemoPage() {
   const textRef = useRef([]);
@@ -81,8 +84,8 @@ export default function GsapDemoPage() {
     <>
       <Navbar />
 
-      <div className="min-h-screen flex flex-col justify-center items-center gap-6  bg-linear-to-r from-gray-400 via-gray-100 to-gray-400 text-gray-800">
-
+      <div className="min-h-screen flex flex-col justify-center items-center gap-6  bg-linear-to-r from-gray-400 via-gray-100 to-gray-400  text-gray-800">
+<BubbleBackground />
         {/* هاله نور */}
         <div
           ref={lampGlowRef}
@@ -99,7 +102,7 @@ export default function GsapDemoPage() {
           <h1
             key={i}
             ref={(el) => (textRef.current[i] = el)}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
+            className="z-40 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
           >
             {txt}
           </h1>
@@ -109,7 +112,6 @@ export default function GsapDemoPage() {
       </div>
 
       <ScrollGuide />
-
     </>
   );
 }

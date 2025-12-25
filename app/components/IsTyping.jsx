@@ -28,7 +28,7 @@ export default function IsTyping() {
   }, []);
 
   return (
-    <div className="typewriter">
+    <div className="z-40 typewriter">
       <h1 ref={textRef}>با بیش از سه سال سابقه در برنامه نویسی تحت وب</h1>
     </div>
   );
