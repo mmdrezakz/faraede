@@ -9,9 +9,9 @@ export function BubbleBackground({ BubbleColors ={} }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
 
     // رنگ‌ها رو از پراپ بگیر
     const colors = Object.values(BubbleColors);
@@ -93,7 +93,7 @@ function draw() {
   return (
     <canvas
       ref={canvasRef}
-      className="z-10 absolute inset-0 bg-linear-to-b w-full h-full"
+      className="z-10 absolute inset-0 bg-linear-to-b shadow-2xl w-full h-full"
     />
   );
 }

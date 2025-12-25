@@ -124,3 +124,16 @@
     @apply bg-background text-foreground;
   }
 }
+.section2{
+  background: url("/main.jpg");
+  background-position: center;
+  background-attachment:scroll;
+  background-repeat: no-repeat;
+  background-size: auto;
+  
+  backdrop-filter: sepia(90%);
+
+}
+body{
+  box-sizing: border-box;
+}

@@ -7,6 +7,7 @@ import IsTyping from './components/IsTyping';
 import ScrollGuide from './components/ScrollGuide';
 import Image from 'next/image';
 import { BubbleBackground } from './components/BubleBg';
+import Section2 from './Section2';
 
 
 
@@ -84,16 +85,16 @@ export default function GsapDemoPage() {
     <>
       <Navbar />
 
-      <div className="min-h-screen flex flex-col justify-center items-center gap-6  bg-linear-to-r from-gray-400 via-gray-100 to-gray-400  text-gray-800">
+      <div className="h-screen relative flex flex-col justify-center items-center gap-6   bg-linear-to-r from-gray-400 via-gray-100 to-gray-400  text-gray-800">
 <BubbleBackground />
         {/* هاله نور */}
         <div
           ref={lampGlowRef}
-          className="absolute top-18 md:top-20  w-65 h-65 rounded-full bg-yellow-200 opacity-0 blur-3xl"
+          className="absolute  top-18 md:top-20  w-65 h-65 rounded-full bg-yellow-200 opacity-0 blur-3xl"
         ></div>
 
         {/* لامپ داخل یک wrapper برای ref */}
-        <div ref={lampWrapperRef} className="absolute top-16 md:top-18 z-10 opacity-0">
+        <div ref={lampWrapperRef} className="absolute top-0  z-10  opacity-0">
           <Image src='/2.png' width={200} height={200} alt="lamp" />
         </div>
 
@@ -112,6 +113,7 @@ export default function GsapDemoPage() {
       </div>
 
       <ScrollGuide />
+      <Section2 />
     </>
   );
 }
