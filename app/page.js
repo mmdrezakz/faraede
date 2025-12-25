@@ -102,7 +102,7 @@ export default function GsapDemoPage() {
           <h1
             key={i}
             ref={(el) => (textRef.current[i] = el)}
-            className="z-40 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
+            className="z-40 text-[23px] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-shadow-custom"
           >
             {txt}
           </h1>

@@ -56,19 +56,19 @@ export default function Navbar() {
     >
 
       <div className="flex justify-between items-center mx-auto max-w-7xl">
-        <div className='flex justify-center items-center gap-4'>
+        <div className='flex justify-center items-center gap-2 md:gap-4'>
 
         {/* Logo */}
         <h1
           ref={(el) => (itemsRef.current[0] = el)}
-          className="bg-gray-200 px-2 py-0.5 rounded-2xl font-extrabold text-gray-950 text-3xl tracking-wide"
+          className="bg-gray-200 px-2 py-0.5 rounded-2xl font-extrabold text-gray-950 text-lg md:text-3xl tracking-wide"
           >
           فرا ایده
         </h1>
-        <div className='flex justify-between items-end gap-3 rounded-full ring-3 ring-gray-400 w-8 h-8'>
+        <div className='flex justify-between items-end gap-3 rounded-full ring-3 ring-gray-400 w-6 md:w-8 h-6 md:h-8'>
           
             <Image className='shadow-2xs shadow-gray-200 rounded-full' src={"https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"} width={100} height={100} alt='placeholder'></Image>
-            <p className='text-gray-200'>UserName</p>
+            <p className='text-gray-200 text-xs sm:text-sm'>UserName</p>
         </div>
           </div>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
       {open && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden flex flex-col gap-4 bg-gray-900/95 bg-opacity-95 shadow-xl mt-4 p-5 rounded-xl text-white text-lg"
+          className="md:hidden flex flex-col gap-4 bg-gray-900/95 bg-opacity-95 shadow-xl mt-4 p-5 rounded-xl min-h-[83vh] text-white text-lg"
         >
           <button className="text-right">خانه</button>
           <button className="text-right">ثبت نام / ورود</button>
