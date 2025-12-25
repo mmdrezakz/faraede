@@ -131,7 +131,7 @@
 }
 .section2{
   background: url("/main.jpg");
-  background-position-y: 50%;
+  background-position-y: 30%;
 background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
