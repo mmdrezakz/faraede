@@ -141,3 +141,11 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.background-intro-section{
+  background: url('/bgintro.svg');
+  background-position-x:center ;
+  background-position-y:0% ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
