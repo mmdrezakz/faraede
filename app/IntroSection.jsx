@@ -21,7 +21,7 @@ const playpen = Playpen_Sans_Arabic({
 })
 export default function IntroSection() {
   return (
-    <section className={` ${playpen.className} bg-gray-50`} >
+    <section className={` ${playpen.className} bg-gray-50 min-h-screen`} >
         <header className='items-center gap-3 md:gap-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 mx-10 sm:mx-16 md:mx-8 px-2 pt-5'>
                 {logos.map(item => <Image className='hover:scale-105 transition-all duration-300 hover:cursor-pointer' key={item.id} src={item.src} width={170} height={170} alt={item.id}/>)}
             
@@ -45,7 +45,7 @@ export default function IntroSection() {
 
         </div>
         </main>
-        <div className="justify-items-center items-center gap-5 grid grid-cols-3 mx-10">
+        <div className="justify-items-center items-center gap-5 grid grid-cols-2 xs:grid-cols-3 md:mx-10">
       <StatsCardAnimated icon={KeyboardIcon} label="کارکنان" value={3} />
       <StatsCardAnimated icon={User2Icon} label="کاربران " value={43} />
       <StatsCardAnimated  icon={FolderKanban} label="پروژه" value={12} />
