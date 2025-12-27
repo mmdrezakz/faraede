@@ -28,7 +28,7 @@ const playpen = Playpen_Sans_Arabic({
 export default function IntroSection() {
 
   return (
-    <section className={` ${playpen.className} bg-gray-50 min-h-[60vh] background-intro-section `} >
+    <section className={` ${playpen.className} bg-gray-100   `} >
         <header className='items-center gap-3 md:gap-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 mx-10 sm:mx-16 md:mx-8 px-2 pt-5'>
                 {logos.map(item => (
 
@@ -39,16 +39,21 @@ export default function IntroSection() {
         </header>
         <div className='flex md:flex-row flex-col md:justify-center md:mt-10'>
 
-        <main className='flex flex-col justify-center items-center mx-10 mt-2 mb-4 p-5 max-w-2xl text-gray-700 text-lg md:text-xl lg:text-2xl text-justify'>
+        <main className='flex flex-col justify-center items-center mx-5 xs:mx-10 mt-2 mb-1 p-4 max-w-2xl text-gray-700 text-lg md:text-xl lg:text-2xl text-justify'>
         <div className='flex justify-center items-start gap-2'>
 
 <AnimatedIconInView>
   <UsersRound />
 </AnimatedIconInView>
             <h2>
-            تیم طراحی و توسعه ی مافعالیتشو از سال 1402 شروع کرده و تمرکزمون روی سایت های مدرن و با طراحی های مدرن هست
+            تیم طراحی و توسعه ی مافعالیتشو از سال 1402 شروع کرده و تمرکزمون روی سایت های مدرن هست.
             </h2>
         </div>
+        <div className='flex justify-center w-full md:w-auto'>
+
+        <Image className='md:hidden block' src={"/faraidea.png"} width={400} height={200} alt='LOGO' />
+        </div>
+          
         <div className='flex justify-center items-start gap-2 mt-5 text-gray-500'>
 
             <AnimatedIconInView>
@@ -58,14 +63,19 @@ export default function IntroSection() {
             <h4 className='xs:text-xs sm:text-sm md:text-lg'>ما با بهترین تکنولوژی ها سایت شمارو طراحی میکنیم</h4>
 
         </div>
-        </main>
-        <div className="justify-items-center items-center gap-5 grid grid-cols-2 md:grid-cols-3">
+                    <div className="justify-items-center items-baseline gap-2.5 gap-y-4 grid grid-cols-3">
       <StatsCardAnimated icon={KeyboardIcon} label="کارکنان" value={3} />
       <StatsCardAnimated icon={User2Icon} label="کاربران " value={43} />
       <StatsCardAnimated  icon={FolderKanban} label="پروژه" value={12} />
 
         </div>
+        </main>
+        <div className='flex justify-center w-full md:w-auto'>
+
+        <Image className='hidden md:block' src={"/faraidea.png"} width={350} height={200} alt='LOGO' />
         </div>
+        </div>
+
 
     </section>
   )
