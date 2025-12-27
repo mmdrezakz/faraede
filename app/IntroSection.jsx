@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import {Playpen_Sans} from 'next/font/google'
+import {Playpen_Sans, Playpen_Sans_Arabic} from 'next/font/google'
 import {FolderKanban, KeyboardIcon, ThumbsUp, User2Icon, UsersRound} from 'lucide-react'
 import {AnimateIcon} from '@/components/animate-ui/icons/icon'
 import StatsCardAnimated from './components/StatsCardAnimation'
@@ -30,7 +30,7 @@ const logos = [
         src: "/logo/logo2.webp"
     }
 ]
-const playpen = Playpen_Sans({
+const playpen = Playpen_Sans_Arabic({
     subsets: [
         'latin', 'arabic'
     ], // اگر متن فارسی/عربی داری اینو اضافه کن
