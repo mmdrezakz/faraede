@@ -51,7 +51,7 @@ export default function IntroSection() {
         </div>
         <div className='flex justify-center w-full md:w-auto'>
 
-        <Image className='md:hidden block' src={"/faraidea.png"} width={400} height={200} alt='LOGO' />
+        <Image className='md:hidden block' src={"/faraidea.png"} width={220} height={200} alt='LOGO' />
         </div>
           
         <div className='flex justify-center items-start gap-2 mt-5 text-gray-500'>
@@ -72,7 +72,7 @@ export default function IntroSection() {
         </main>
         <div className='flex justify-center w-full md:w-auto'>
 
-        <Image className='hidden md:block' src={"/faraidea.png"} width={350} height={200} alt='LOGO' />
+        <Image className='hidden md:block' src={"/faraidea.png"} width={400} height={200} alt='LOGO' />
         </div>
         </div>
 
