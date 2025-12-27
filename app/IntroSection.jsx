@@ -21,9 +21,10 @@ const logos =[
 
 ]
 const playpen = Playpen_Sans_Arabic({
-      subsets: ['latin'],
-  weight: "400"
+  subsets: ['latin', 'arabic'], // اگر متن فارسی/عربی داری اینو اضافه کن
+  weight: '400'
 })
+
 
 export default function IntroSection() {
 
