@@ -24,6 +24,7 @@ export default function Navbar() {
               width={100}
               height={100}
               alt="placeholder"
+              preload={true}
             />
             <p className="text-gray-200 text-xs sm:text-sm">UserName</p>
           </div>
@@ -31,7 +32,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 font-medium text-white text-lg">
-          <Link href={'/register'}>
+          <Link href={'/register'} prefetch>
             <li className="group relative cursor-pointer">
               ثبت نام / ورود
               <span className="bottom-0 left-0 absolute bg-white rounded-full w-0 group-hover:w-full transition-all duration-300"></span>
@@ -94,7 +95,7 @@ export default function Navbar() {
           <Link href={'/'}>
             <button className="text-right">خانه</button>
           </Link>
-          <Link href={'/register'}>
+          <Link href={'/register'} prefetch>
             <button className="text-right">ثبت نام / ورود</button>
           </Link>
           <button className="text-right">اعضاء</button>

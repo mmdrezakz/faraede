@@ -33,6 +33,7 @@ export default function Header() {
       height={300}
       alt="hero"
       className="object-contain"
+      loading='eager'
     />
   </div>
 

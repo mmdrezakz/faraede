@@ -5,8 +5,9 @@ import { Lalezar } from 'next/font/google'
 
  
 const ss = Lalezar({
-  subsets: ['latin'],
-  weight: "400"
+  subsets: ['latin','arabic'],
+  weight: "400",
+  preload:true
 })
 
 export const metadata = {
@@ -16,7 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="rtl">
+    <html lang="fa" dir="rtl">
+      <head>
+
+      <link
+        rel="preload"
+        href="/layered.svg"
+        as="image"
+        type="image/svg+xml"
+        />
+        </head>
 
       <body className={ss.className}>
 

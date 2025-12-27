@@ -55,7 +55,7 @@ export default function Page() {
           <p className='text-xs sm:text-sm'>قبلا ثبت نام کرده ام </p>
           <Link
             className='bg-orange-400 px-2 py-0.5 rounded-lg shadow-sm hover:shadow-md transition text-white'
-            href={'/login'}
+            href={'/login'} prefetch
           >
             ورود
           </Link>
