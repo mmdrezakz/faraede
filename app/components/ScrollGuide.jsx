@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 export default function ScrollGuide() {
   const arrowRef = useRef(null);
+  const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
     // انیمیشن بالا پایین شدن فلش
@@ -15,6 +16,18 @@ export default function ScrollGuide() {
       duration: 1,
       ease: "power1.inOut",
     });
+
+    // لیسنر برای اسکرول
+    const handleScrollCheck = () => {
+      if (window.scrollY === 0) {
+        setIsTop(true);
+      } else {
+        setIsTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollCheck);
+    return () => window.removeEventListener("scroll", handleScrollCheck);
   }, []);
 
   const handleScroll = () => {
@@ -23,6 +36,9 @@ export default function ScrollGuide() {
       behavior: "smooth",
     });
   };
+
+  // فقط وقتی بالای صفحه هست نمایش بده
+  if (!isTop) return null;
 
   return (
     <div className="bottom-6 left-1/2 z-50 fixed -translate-x-1/2">

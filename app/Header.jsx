@@ -19,7 +19,7 @@ export default function Header() {
   <div className="my-15 2xl:my-30">
     <h1 className="mt-10 font-bold text-gray-100 text-6xl lg:text-8xl">فرا تر از انتظار</h1>
     <h2 className="text-gray-200 text-4xl md:text-6xl">فرا ایده</h2>
-    <button className="bg-gray-400 hover:bg-gray-300 mt-1 px-6 py-3 rounded-full text-gray-900 transition duration-500">
+    <button className="bg-gray-400 hover:bg-gray-300 mt-1 px-6 py-3 rounded-full text-gray-900 transition duration-500 cursor-pointer">
       خدمات
     </button>
   </div>
