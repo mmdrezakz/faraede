@@ -173,7 +173,7 @@ export default function PackageSwiper() {
                     <p className="mb-8 font-extrabold text-[#0066ff] group-hover:text-yellow-300 text-2xl transition-colors duration-500">
                       {pkg.price}
                     </p>
-                    <button className="bg-[#0066ff] hover:bg-white shadow-lg hover:shadow-[#0066ff]/50 px-10 py-4 rounded-full font-bold text-white hover:text-[#002233] transition-all duration-500">
+                    <button className="bg-[#0066ff] hover:bg-[#0251c7] shadow-lg hover:shadow-[#0066ff]/50 px-10 py-4 rounded-full font-bold text-white transition-all duration-500">
                       سفارش پکیج
                     </button>
                   </div>

@@ -133,6 +133,7 @@
 body{
   box-sizing: border-box;
   position: relative;
+  
 }
 .header-top{
   background: url("/layered.svg");
@@ -140,6 +141,9 @@ body{
   background-position-y:0% ;
   background-repeat: no-repeat;
   background-size: cover;
+}
+button{
+  cursor: pointer;
 }
 /* .background-intro-section{
   background: url('/bgintro.svg');
