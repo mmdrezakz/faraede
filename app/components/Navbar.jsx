@@ -32,32 +32,32 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-8 font-medium text-white text-lg">
-                    <Link href={'/register'} prefetch>
+                    <Link className='hover:' href={'/register'} prefetch>
                         <li className="group relative cursor-pointer">
                             ثبت نام / ورود
                             <span
-                                className="bottom-0 left-0 absolute bg-white rounded-full w-0 group-hover:w-full transition-all duration-300"></span>
+                                className="bottom-0 left-0 absolute bg-[#0066ff] rounded-full w-0 group-hover:w-full h-0.5 transition-all duration-300"></span>
                         </li>
                     </Link>
                     <Link href={'/team'}>
                         <li className="group relative cursor-pointer">
                             اعضاء
                             <span
-                                className="bottom-0 left-0 absolute bg-white rounded-full w-0 group-hover:w-full transition-all duration-300"></span>
+                                className="bottom-0 left-0 absolute bg-[#0066ff] rounded-full w-0 group-hover:w-full h-0.5 transition-all duration-300"></span>
                         </li>
                     </Link>
                     <Link href={'/team'}>
                         <li className="group relative cursor-pointer">
                             نمونه‌کارها
                             <span
-                                className="bottom-0 left-0 absolute bg-white rounded-full w-0 group-hover:w-full transition-all duration-300"></span>
+                                className="bottom-0 left-0 absolute bg-[#0066ff] rounded-full w-0 group-hover:w-full h-0.5 transition-all duration-300"></span>
                         </li>
                     </Link>
                     <Link href={'/team'}>
                         <li className="group relative cursor-pointer">
                             خانه
                             <span
-                                className="bottom-0 left-0 absolute bg-white rounded-full w-0 group-hover:w-full transition-all duration-300"></span>
+                                className="bottom-0 left-0 absolute bg-[#0066ff] rounded-full w-0 group-hover:w-full h-0.5 transition-all duration-300"></span>
                         </li>
                     </Link>
                 </ul>
@@ -106,7 +106,7 @@ export default function Navbar() {
     />
 
     {/* Mobile Menu */}
-    <div className="md:hidden top-10 z-50 fixed inset-x-0 flex flex-col gap-4 bg-gray-900 shadow-xl mx-10 mt-4 p-5 rounded-xl text-white text-lg">
+    <div className="md:hidden z-50 fixed inset-x-0 flex flex-col gap-4 bg-gray-900 shadow-[#1a253d] shadow-2xs mx-10 mt-4 p-5 rounded-xl text-white text-lg">
       
       {/* دکمه کلوز */}
       <button
@@ -116,16 +116,19 @@ export default function Navbar() {
         ✕
       </button>
 
-      <Link href={'/'} prefetch>
+      <Link href={'/'} className='' prefetch>
         <button className="text-right cursor-pointer">خانه</button>
+
+                        
       </Link>
-      <Link href={'/register'} prefetch>
+      <Link href={'/register'} className=' ' prefetch>
         <button className="text-right cursor-pointer">ثبت نام / ورود</button>
+
+                        
       </Link>
       <button className="text-right">اعضاء</button>
-      <button className="text-right">خدمات</button>
+
       <button className="text-right">نمونه‌کارها</button>
-      <button className="text-right">تماس</button>
     </div>
   </>
 )}
