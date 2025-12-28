@@ -114,7 +114,7 @@ export default function PackageSwiper() {
     <div className="bg-linear-to-b from-[#001122] to-[#002233] py-16" dir="rtl">
       <div className="mx-auto px-6 max-w-7xl">
         <h2 className="mb-6 font-bold text-white text-4xl md:text-5xl text-center">
-          پکیج‌های سفارش طراحی سایت
+          پکیج‌ها
         </h2>
         <p className="mb-16 text-cyan-300 text-xl text-center">
           انتخاب پکیج مناسب برای کسب‌وکار شما – با پشتیبانی حرفه‌ای و توسعه VIP
