@@ -79,10 +79,10 @@ export default function IntroSection() {
                     </div>
                     <div
 
-                        className="justify-items-center items-baseline gap-2.5 gap-y-4 grid grid-cols-3">
+                        className="justify-items-center items-baseline gap-5 gap-y-4 grid grid-cols-3">
                         <StatsCardAnimated icon={KeyboardIcon} label="کارکنان" value={3}/>
-                        <StatsCardAnimated icon={User2Icon} label="کاربران " value={43}/>
                         <StatsCardAnimated icon={FolderKanban} label="پروژه" value={12}/>
+                        <StatsCardAnimated icon={User2Icon} label="کاربران " value={43}/>
 
                     </div>
                 </main>
