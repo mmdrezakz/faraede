@@ -53,7 +53,7 @@ export default function IntroSection() {
             </header>
             <div className='flex md:flex-row flex-col md:justify-center md:mt-10'>
                 <main
-                    className='flex flex-col justify-center items-center mx-5 xs:mx-10 mt-2 mb-1 p-4 max-w-2xl text-gray-700 text-lg md:text-xl lg:text-2xl text-justify'>
+                    className='flex flex-col justify-center items-center mx-5 xs:mx-10 mt-2 mb-1 p-4 md:max-w-2xl text-gray-700 text-lg md:text-xl lg:text-2xl text-justify'>
                     <div className='flex justify-center items-start gap-2'>
 
                         <AnimatedIconInView>
@@ -64,7 +64,7 @@ export default function IntroSection() {
 با استفاده از بهترین تکنولوژی‌های روز، وبسایتی می‌سازیم که نه تنها زیبا باشد، بلکه عملکردی بی‌نقص داشته باشد.
                         </h2>
                     </div>
-<div className='flex items-center gap-2 mt-4 mr-20 w-full text-sm'>
+<div className='flex items-center gap-2 mt-4 md:mr-20 w-full text-sm'>
                             <button className='bg-[#0066ff] hover:bg-[#025de6] shadow-lg hover:shadow-[#0066ff]/50 px-4 py-1 rounded-lg font-bold text-white transition-all duration-500 cursor-pointer'>نمونه کار ها</button>
                         <button className='bg-[#0066ff] hover:bg-[#025de6] shadow-lg hover:shadow-[#0066ff]/50 px-4 py-1 rounded-lg font-bold text-white transition-all duration-500 cursor-pointer'>اعضاء</button>
 </div>
