@@ -63,7 +63,7 @@ export default function IntroSection() {
 با استفاده از بهترین تکنولوژی‌های روز، وبسایتی می‌سازیم که نه تنها زیبا باشد، بلکه عملکردی بی‌نقص داشته باشد.
                         </h2>
                     </div>
-                                    <div className='flex justify-center items-center'>
+                                    <div className='md:hidden flex justify-center items-center'>
 
 <Image src={"/working3.png"} className='md:hidden block' width={400} height={400} alt='working team'/>
                 </div>
@@ -86,6 +86,8 @@ export default function IntroSection() {
 
                     </div>
                 </main>
+                <div className='justify-center items-center grid grid-cols-1 lg:grid-cols-2'>
+
                 <div className='flex justify-center items-center'>
 
 <Image src={"/working3.png"} className='hidden md:block' width={400} height={400} alt='working team'/>
@@ -100,6 +102,7 @@ export default function IntroSection() {
                         alt='LOGO'/>
                 </div>
             </div>
+                        </div>
 
         </section>
     )
