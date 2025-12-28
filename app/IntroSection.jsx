@@ -8,6 +8,7 @@ import StatsCardAnimated from './components/StatsCardAnimation'
 import {motion, useInView} from "framer-motion"
 import LogoIntroSection from './components/LogoIntroSection'
 import AnimatedIconInView from "./components/IconAnimateIntroSection"
+import Link from 'next/link'
 
 const logos = [
     {
@@ -63,6 +64,11 @@ export default function IntroSection() {
 با استفاده از بهترین تکنولوژی‌های روز، وبسایتی می‌سازیم که نه تنها زیبا باشد، بلکه عملکردی بی‌نقص داشته باشد.
                         </h2>
                     </div>
+<div className='flex items-center gap-2 mt-4 mr-20 w-full text-sm'>
+                            <button className='bg-[#0066ff] hover:bg-[#025de6] shadow-lg hover:shadow-[#0066ff]/50 px-4 py-1 rounded-lg font-bold text-white transition-all duration-500 cursor-pointer'>نمونه کار ها</button>
+                        <button className='bg-[#0066ff] hover:bg-[#025de6] shadow-lg hover:shadow-[#0066ff]/50 px-4 py-1 rounded-lg font-bold text-white transition-all duration-500 cursor-pointer'>اعضاء</button>
+</div>
+
                                     <div className='md:hidden flex justify-center items-center'>
 
 <Image src={"/working3.png"} className='md:hidden block' width={400} height={400} alt='working team'/>
