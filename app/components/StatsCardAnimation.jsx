@@ -51,15 +51,15 @@ export default function StatsCardAnimated({ icon: Icon, label, value }) {
   return (
     <div
       ref={cardRef}
-      className="flex items-center gap-3 bg-white hover:bg-gray-100 shadow mt-5 p-2 md:p-8 lg:px-9 rounded-lg transition-all duration-700 hover:cursor-pointer"
+      className="flex items-center gap-3 bg-[#101828] shadow hover:shadow-[#0066ff]/40 mt-5 p-2 md:p-8 lg:px-9 border border-[#0066ff]/20 hover:border-[#0066ff] rounded-lg text-white transition-all duration-700 hover:cursor-pointer"
     >
-      <div className="text-blue-600 text-3xl">
+      <div className="text-blue-200 text-3xl">
         <Icon />
       </div>
 
       <div>
-        <p className="text-gray-500 text-xs md:text-sm">{label}</p>
-        <p ref={numberRef} className="font-bold text-xl"></p>
+        <p className="text-gray-200 text-xs md:text-sm text-center">{label}</p>
+        <p ref={numberRef} className="font-bold text-xl text-center"></p>
       </div>
     </div>
   )

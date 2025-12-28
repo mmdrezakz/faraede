@@ -51,7 +51,6 @@ export default function IntroSection() {
                 }
             </header>
             <div className='flex md:flex-row flex-col md:justify-center md:mt-10'>
-
                 <main
                     className='flex flex-col justify-center items-center mx-5 xs:mx-10 mt-2 mb-1 p-4 max-w-2xl text-gray-700 text-lg md:text-xl lg:text-2xl text-justify'>
                     <div className='flex justify-center items-start gap-2'>
@@ -60,20 +59,14 @@ export default function IntroSection() {
                             <UsersRound/>
                         </AnimatedIconInView>
                         <h2>
-                            تیم طراحی و توسعه ی مافعالیتشو از سال 1402 شروع کرده و تمرکزمون روی سایت های
-                            مدرن هست.
+تیم طراحی و توسعه ما از سال ۱۴۰۲ فعالیت خود را آغاز کرده و تمرکز اصلی‌مان بر ساخت سایت‌های مدرن، سریع و حرفه‌ای است.  
+با استفاده از بهترین تکنولوژی‌های روز، وبسایتی می‌سازیم که نه تنها زیبا باشد، بلکه عملکردی بی‌نقص داشته باشد.
                         </h2>
                     </div>
-                    <div className='flex justify-center w-full md:w-auto'>
+                                    <div className='flex justify-center items-center'>
 
-                        <Image
-                            className='md:hidden block'
-                            src={"/faraidea.png"}
-                            width={220}
-                            height={200}
-                            alt='LOGO'
-                            priority="priority"/>
-                    </div>
+<Image src={"/working3.png"} className='md:hidden block' width={400} height={400} alt='working team'/>
+                </div>
 
                     <div className='flex justify-center items-start gap-2 mt-5 text-gray-500'>
 
@@ -85,6 +78,7 @@ export default function IntroSection() {
 
                     </div>
                     <div
+
                         className="justify-items-center items-baseline gap-2.5 gap-y-4 grid grid-cols-3">
                         <StatsCardAnimated icon={KeyboardIcon} label="کارکنان" value={3}/>
                         <StatsCardAnimated icon={User2Icon} label="کاربران " value={43}/>
@@ -92,10 +86,14 @@ export default function IntroSection() {
 
                     </div>
                 </main>
-                <div className='flex justify-center w-full md:w-auto'>
+                <div className='flex justify-center items-center'>
+
+<Image src={"/working3.png"} className='hidden md:block' width={400} height={400} alt='working team'/>
+                </div>
+                <div className='flex justify-center md:w-auto'>
 
                     <Image
-                        className='hidden md:block'
+                        className=''
                         src={"/faraidea.png"}
                         width={400}
                         height={200}
