@@ -1,7 +1,11 @@
 
+
+import { Suspense } from "react";
 import "./globals.css";
 
 import { Lalezar } from 'next/font/google'
+import Loading from "./loading";
+
 
  
 const ss = Lalezar({
@@ -27,9 +31,9 @@ export default function RootLayout({ children }) {
         type="image/svg+xml"
         />
         </head>
-
+      
       <body className={ss.className}>
-
+<Suspense fallback={<Loading/>}/>
         {children}
       </body>
     </html>

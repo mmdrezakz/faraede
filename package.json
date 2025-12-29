@@ -11,6 +11,8 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@heroui/react": "^2.8.7",
+    "@heroui/spinner": "^2.2.26",
     "@mui/material": "^7.3.6",
     "bootstrap-icons": "^1.13.1",
     "class-variance-authority": "^0.7.1",
@@ -18,9 +20,9 @@
     "gsap": "^3.14.2",
     "lucide-react": "^0.562.0",
     "motion": "^12.23.26",
-    "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "next": "^16.1.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-intersection-observer": "^10.0.0",
     "swiper": "^12.0.3",
     "tailwind-merge": "^3.4.0"
