@@ -83,7 +83,7 @@ export default function ShowCommentSwiper() {
         >
         {testimonials.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="flex justify-center items-center px-8 md:px">
+            <div className="flex justify-center items-center px-8 md:px-1">
               <div className="items-center gap-12 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl">
                 {/* بخش متن و پروفایل */}
                 <div className="space-y-2 text-right">
