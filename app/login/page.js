@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <main className='register min-h-screen flex justify-center items-center bg-linear-to-b from-[#001122] to-[#002a69]'>
+    <main className='register min-h-screen flex justify-center items-center bg-linear-to-b from-[#001122] to-[#001b38]'>
 
 
       <form
