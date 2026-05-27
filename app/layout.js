@@ -25,8 +25,7 @@ export default async function RootLayout({ children }) {
         <title>فراایده</title>
         <meta name="google-site-verification" content="vowZS5twhGbzwww2Elk_wSglexOXbieaI-FLJxQcNfE" />
         <meta name="description" content="فراایده طراحی سایت" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/1-removebg-preview (1).png" />
-        <link rel="manifest" href="/favicon/manifest.json" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/1mmd.png" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
