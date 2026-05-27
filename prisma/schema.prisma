@@ -1,0 +1,222 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+
+  // url رو از اینجا حذف کن - بذار تو .env باشه
+}
+
+// ========== Enums ==========
+enum Role {
+  USER
+  ADMIN
+  MODERATOR
+}
+
+enum CommentStatus {
+  PENDING
+  PUBLISHED
+  HIDDEN
+  DELETED
+}
+
+// ========== مدل‌های اصلی ==========
+
+model User {
+  id               String    @id @default(cuid())
+  name             String?
+  username         String?   @unique
+  email            String?   @unique
+  emailVerified    DateTime?
+  image            String?    
+  phone            String?
+  phoneVerified    Boolean   @default(false)
+  password         String?
+  provider         String?
+  resetToken       String?
+  resetTokenExpiry DateTime?
+  role             Role      @default(USER)
+  
+  // روابط
+  favorites        Favorite[]
+  orders           Order[]
+  carts            Cart[]
+  accounts         Account[]
+  sessions         Session[]
+  
+  // کامنت‌هایی که کاربر نوشته
+  comments         Comment[]  @relation("UserComments")
+  
+  // ریپلای‌هایی که کاربر نوشته
+  commentReplies   Comment[]  @relation("UserReplies")
+  
+  // لایک‌های کامنت
+  commentLikes     CommentLike[]
+  
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  
+  @@map("users")
+}
+
+model Package {
+  id          Int      @id @default(autoincrement())
+  slugId      String   @unique 
+  title       String
+  price       String
+  description String 
+  image       String
+  features    String[]
+  
+  // روابط
+  favorites   Favorite[]
+  orders      Order[]
+  carts       Cart[]
+  comments    Comment[]
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt 
+  
+  @@map("packages")
+}
+
+// ========== مدل‌های کامنت ==========
+
+model Comment {
+  id              Int            @id @default(autoincrement())
+  content         String         @db.Text
+  status          CommentStatus  @default(PENDING)
+  rating          Int?           // امتیاز ۱-۵
+  likeCount       Int            @default(0)
+  isEdited        Boolean        @default(false)
+  editedAt        DateTime?
+  
+  // نویسنده کامنت
+  authorId        String
+  author          User           @relation("UserComments", fields: [authorId], references: [id], onDelete: Cascade)
+  
+  // پکیج مورد نظر
+  packageId       Int
+  package         Package        @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  
+  // والد (برای ریپلای) - ریپلای‌ها همون کامنت هستن با parentId
+  parentId        Int?
+  parent          Comment?       @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies         Comment[]      @relation("CommentReplies")
+    replyAuthor       User?     @relation("UserReplies", fields: [replyAuthorId], references: [id], onDelete: Cascade)
+  replyAuthorId     String?
+  // ❌ فیلد replyAuthorId و replyAuthor رو کامل حذف کردم
+  // چون این کار رو parent انجام میده
+  
+  // لایک‌ها
+  likes           CommentLike[]
+  
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  
+  @@index([authorId])
+  @@index([packageId])
+  @@index([parentId])
+  @@index([status])
+  @@index([createdAt])
+  @@map("comments")
+}
+
+model CommentLike {
+  id          Int      @id @default(autoincrement())
+  userId      String
+  commentId   Int
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comment     Comment  @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime @default(now())
+  
+  @@unique([userId, commentId])
+  @@index([userId])
+  @@index([commentId])
+  @@map("comment_likes")
+}
+
+// ========== مدل‌های جانبی ==========
+
+model Favorite {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  packageId Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  package   Package  @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  
+  @@unique([userId, packageId])
+  @@map("favorites")
+}
+
+model Order {
+  id           String   @id @default(cuid())
+  userId       String
+  packageId    Int
+  status       String   @default("pending")
+  amount       String
+  transactionId String?
+  paymentMethod String?
+  paidAt       DateTime?
+  
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  package      Package  @relation(fields: [packageId], references: [id])
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@map("orders")
+}
+
+model Cart {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  packageId Int
+  quantity  Int      @default(1)
+  
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  package   Package  @relation(fields: [packageId], references: [id])
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@unique([userId, packageId])
+  @@map("carts")
+}
+
+model Account {
+  id                String   @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
