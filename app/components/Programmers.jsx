@@ -7,7 +7,7 @@ const programmers = [
   {
     name: "محمدرضا کاظمی",
     degree: "کارشناسی مهندسی نرم افزار",
-    specialty: "فرانت اند",
+    specialty: "فول استک",
     experience: "بیش از سه سال",
     image: "/programmer/mohammad1.jpg",
     personalSite: "https://example.com",
@@ -19,11 +19,11 @@ const programmers = [
     },
   },
   {
-    name: "امیر پارسا",
-    degree: "مدرک بین المللی طراحی وب",
+    name: "عارف مرادی",
+    degree: "کارشناس ارشد بک اند",
     specialty: "بک اند",
     experience: "بیش از دو سال",
-    image: "/programmer/amir1.jpg",
+    image: "/programmer/aref1.jpg",
     personalSite: "https://example.com",
     resume: "https://example.com/resume.pdf",
     social: {
@@ -33,11 +33,11 @@ const programmers = [
     },
   },
   {
-    name: "عارف مرادی",
-    degree: "کارشناسی ارشد بک اند",
+    name: "امیر پارسا",
+    degree: "مدرک بین المللی طراحی وب",
     specialty: "بک اند",
     experience: "بیش از دو سال",
-    image: "/programmer/aref1.jpg",
+    image: "/programmer/amir1.jpg",
     personalSite: "https://example.com",
     resume: "https://example.com/resume.pdf",
     social: {
